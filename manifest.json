@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Open In BundlePhobia",
+  "version": "0.0.1",
+  "description": "Open the npm package you have open in bundle phobia from a button click",
+  "content_scripts": [
+    {
+      "matches": ["https://www.npmjs.com/package/*"],
+      "js": ["index.js"]
+    }
+  ],
+  "author": "jamesinaxx"
+}
