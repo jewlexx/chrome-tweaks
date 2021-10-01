@@ -1,10 +1,6 @@
-const unsubscribe = () =>
+const unsubscribe = async () =>
   document.querySelector('[aria-label="Unsubscribe"]')?.click();
 
-const els = document.getElementsByClassName('ytd-subscribe-button-renderer');
-
-Array.from(els)
+Array.from(document.getElementsByClassName('ytd-subscribe-button-renderer'))
   .map(el => el.parentElement)
-  .forEach(el => {
-    el.addEventListener('click', unsubscribe);
-  });
+  .forEach(async el => el.addEventListener('click', unsubscribe));
