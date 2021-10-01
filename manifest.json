@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Open In BundlePhobia",
+  "name": "Chrome Tweaks",
   "version": "0.0.1",
-  "description": "Open the npm package you have open in bundle phobia from a button click",
+  "description": "A collection of little scripts that I use in my day-to-day",
   "content_scripts": [
     {
       "matches": ["https://www.npmjs.com/package/*"],
