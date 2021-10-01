@@ -6,7 +6,15 @@
   "content_scripts": [
     {
       "matches": ["https://www.npmjs.com/package/*"],
-      "js": ["index.js"]
+      "js": ["npm.js"]
+    },
+    {
+      "matches": ["https://orteil.dashnet.org/*"],
+      "js": ["cookie.js"]
+    },
+    {
+      "matches": ["https://www.youtube.com/feed/channels"],
+      "js": ["youtube.js"]
     }
   ],
   "author": "jamesinaxx"
