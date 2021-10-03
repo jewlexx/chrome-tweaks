@@ -13,11 +13,7 @@
       "js": ["cookie.js"]
     },
     {
-      "matches": [
-        "https://www.youtube.com/feed/channels",
-        "https://www.youtube.com/channel/*",
-        "https://www.youtube.com/user/*"
-      ],
+      "matches": ["https://www.youtube.com/*"],
       "js": ["youtube.js"]
     }
   ],
