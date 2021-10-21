@@ -15,6 +15,15 @@
     {
       "matches": ["https://www.youtube.com/*"],
       "js": ["youtube.js"]
+    },
+    {
+      "matches": ["https://www.ivanhoeconnect.com/my.policy"],
+      "js": ["seqta.js"]
+    },
+    {
+      "matches": ["https://www.twitch.tv/*"],
+      "js": ["twitch.js"],
+      "all_frames": true
     }
   ],
   "author": "jamesinaxx"
