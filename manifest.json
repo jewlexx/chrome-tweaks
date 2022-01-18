@@ -5,24 +5,8 @@
   "description": "A collection of little scripts that I use in my day-to-day",
   "content_scripts": [
     {
-      "matches": ["https://www.npmjs.com/package/*"],
-      "js": ["npm.js"]
-    },
-    {
-      "matches": ["https://orteil.dashnet.org/*"],
-      "js": ["cookie.js"]
-    },
-    {
-      "matches": ["https://www.youtube.com/*"],
-      "js": ["youtube.js"]
-    },
-    {
-      "matches": ["https://www.ivanhoeconnect.com/my.policy"],
-      "js": ["seqta.js"]
-    },
-    {
-      "matches": ["https://www.twitch.tv/*"],
-      "js": ["twitch.js"],
+      "matches": ["<all_urls>"],
+      "js": ["dist/bundle.js"],
       "all_frames": true
     }
   ],

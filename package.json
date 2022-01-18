@@ -1,0 +1,20 @@
+{
+  "name": "tweaks",
+  "version": "1.0.0",
+  "private": true,
+  "repository": "https://github.com/jamesinaxx/chrome-tweaks.git",
+  "license": "MIT",
+  "author": "jamesinaxx <61040004+jamesinaxx@users.noreply.github.com>",
+  "scripts": {
+    "build": "webpack",
+    "dev": "webpack --watch"
+  },
+  "dependencies": {
+    "marked": "4.0.10"
+  },
+  "devDependencies": {
+    "@types/marked": "4.0.1",
+    "webpack": "5.66.0",
+    "webpack-cli": "4.9.1"
+  }
+}
