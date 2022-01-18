@@ -3,37 +3,23 @@ import { npm } from './npm';
 import { youtube } from './youtube';
 import { twitch } from './twitch';
 import { markdown } from './markdown';
+window.$ = jquery;
 
-let reg = /^https:\/\/www.npmjs.com\/package\/./;
-
-const isUrl = () => {
-  return reg.test(window.location.href);
+const testUrl = (regex: RegExp) => {
+  return regex.test(window.location.href);
 };
 
-(async () => {
-  window.$ = jquery;
-
-  if (isUrl()) {
+switch (true) {
+  case testUrl(/^https:\/\/www.npmjs.com\/package\/./):
     npm();
-    return;
-  }
-
-  reg = /^https:\/\/www.youtube.com\/watch\?v=/;
-
-  if (isUrl()) {
+    break;
+  case testUrl(/^https:\/\/www.youtube.com\/watch\?v=/):
     youtube();
-    return;
-  }
-
-  reg = /^https:\/\/www.twitch.tv/;
-  if (isUrl()) {
+    break;
+  case testUrl(/^https:\/\/www.twitch.tv/):
     twitch();
-    return;
-  }
-
-  reg = /\.mdx?$/;
-  if (isUrl()) {
+    break;
+  case testUrl(/\.mdx$/):
     markdown();
-    return;
-  }
-})();
+    break;
+}
