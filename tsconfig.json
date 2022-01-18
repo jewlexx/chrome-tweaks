@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "module": "ES2020",
+    "target": "es5",
+    "noImplicitAny": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strictFunctionTypes": true,
+    "strict": true,
+    "outDir": "dist",
+    "allowJs": true,
+    "moduleResolution": "node"
+  },
+  "exclude": ["node_modules", "**/node_modules/*", "dist", "**/dist/*"]
+}

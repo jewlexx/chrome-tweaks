@@ -1,4 +1,4 @@
-const { marked } = require('marked');
+import { marked } from 'marked';
 
 (async () => {
   const mdReg = /\.mdx?$/;
@@ -9,7 +9,7 @@ const { marked } = require('marked');
     return;
   }
 
-  const md = document.querySelector('pre').innerHTML;
+  const md = document.querySelector('pre')!.innerHTML;
 
   console.log(md);
 
@@ -17,3 +17,5 @@ const { marked } = require('marked');
 
   document.body.innerHTML = html;
 })();
+
+export {};

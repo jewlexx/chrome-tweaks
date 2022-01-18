@@ -6,26 +6,26 @@ const isUrl = () => {
 
 (() => {
   if (isUrl()) {
-    require('./npm.js');
+    import('./npm');
     return;
   }
 
   reg = /^https:\/\/www.youtube.com\/watch\?v=/;
 
   if (isUrl()) {
-    require('./youtube.js');
+    import('./youtube');
     return;
   }
 
   reg = /^https:\/\/www.twitch.tv/;
   if (isUrl()) {
-    require('./twitch.js');
+    import('./twitch');
     return;
   }
 
   reg = /\.mdx?$/;
   if (isUrl()) {
-    require('./markdown.js');
+    import('./markdown');
     return;
   }
 })();
