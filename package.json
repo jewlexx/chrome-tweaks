@@ -6,8 +6,8 @@
   "license": "MIT",
   "author": "jamesinaxx <61040004+jamesinaxx@users.noreply.github.com>",
   "scripts": {
-    "build": "webpack",
-    "dev": "webpack --watch"
+    "build": "webpack --mode production",
+    "dev": "webpack --watch --mode production"
   },
   "dependencies": {
     "jquery": "3.6.0",
