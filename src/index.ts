@@ -3,9 +3,10 @@ import { npm } from './npm';
 import { youtube } from './youtube';
 import { twitch } from './twitch';
 import { markdown } from './markdown';
+
 window.$ = jquery;
 
-const testUrl = (regex: RegExp) => {
+const testUrl = (regex: RegExp): boolean => {
   return regex.test(window.location.href);
 };
 
@@ -19,7 +20,7 @@ switch (true) {
   case testUrl(/^https:\/\/www.twitch.tv/):
     twitch();
     break;
-  case testUrl(/\.mdx$/):
+  case testUrl(/\.mdx?$/):
     markdown();
     break;
 }
