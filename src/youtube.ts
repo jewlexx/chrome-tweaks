@@ -1,8 +1,7 @@
-// Click on video title and it copies it
-const el = document.querySelector('#container > h1 > yt-formatted-string');
+export function youtube() {
+  const el = $('#container > h1 > yt-formatted-string');
 
-el.addEventListener('click', (e) =>
-  navigator.clipboard.writeText(e.currentTarget.innerText),
-);
-
-export {};
+  el.on('click', () => {
+    navigator.clipboard.writeText(el.text());
+  });
+}

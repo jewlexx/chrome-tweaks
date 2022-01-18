@@ -1,6 +1,6 @@
 import { marked } from 'marked';
 
-(async () => {
+export async function markdown() {
   const mdReg = /\.mdx?$/;
   const isMd = mdReg.test(window.location.href);
 
@@ -9,13 +9,11 @@ import { marked } from 'marked';
     return;
   }
 
-  const md = document.querySelector('pre')!.innerHTML;
+  const md = $('pre').text();
 
   console.log(md);
 
   const html = marked(md);
 
-  document.body.innerHTML = html;
-})();
-
-export {};
+  $('pre').html(html);
+}

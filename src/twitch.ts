@@ -1,9 +1,7 @@
-setInterval(function () {
-  const el = document.querySelector<HTMLButtonElement>(
-    '[aria-label="Claim Bonus"]',
-  );
+export function twitch() {
+  setInterval(() => {
+    const el = $('[aria-label="Claim Bonus"]');
 
-  if (el) el.click();
-}, 5e3);
-
-export {};
+    if (el) el.trigger('click');
+  }, 5e3);
+}
