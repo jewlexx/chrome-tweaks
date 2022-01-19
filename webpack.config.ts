@@ -1,14 +1,27 @@
 import path from 'path';
 import fs from 'fs';
 
-const config = () => {
+interface Env {
+  firefox: true | undefined;
+  chrome: true | undefined;
+}
+
+const config = (env: Env) => {
+  if (!env.firefox && !env.chrome) {
+    process.stdout.write(
+      'Please choose either chrome or firefox using "--env <browser>"',
+    );
+    process.exit(1);
+  }
+
   const dist = path.resolve(__dirname, 'dist');
   fs.rmSync(dist, { recursive: true, force: true });
   fs.mkdirSync(dist);
-  fs.copyFileSync(
-    path.resolve(__dirname, 'chrome.manifest.json'),
-    path.resolve(dist, 'manifest.json'),
+  const manifestLoc = path.resolve(
+    __dirname,
+    `${env.firefox ? 'firefox' : 'chrome'}.manifest.json`,
   );
+  fs.copyFileSync(manifestLoc, path.resolve(dist, 'manifest.json'));
 
   return {
     entry: './src/index.ts',
