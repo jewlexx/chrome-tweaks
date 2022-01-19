@@ -1,10 +1,12 @@
-const path = require('path');
-const fs = require('fs');
+import path from 'path';
+import fs from 'fs';
 
-module.exports = () => {
+const config = () => {
   const dist = path.resolve(__dirname, 'dist');
+  fs.rmSync(dist, { recursive: true, force: true });
+  fs.mkdirSync(dist);
   fs.copyFileSync(
-    path.resolve(__dirname, 'manifest.json'),
+    path.resolve(__dirname, 'chrome.manifest.json'),
     path.resolve(dist, 'manifest.json'),
   );
 
@@ -28,3 +30,5 @@ module.exports = () => {
     },
   };
 };
+
+export default config;
