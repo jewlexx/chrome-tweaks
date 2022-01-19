@@ -1,5 +1,5 @@
 {
-  "manifest_version": 3,
+  "manifest_version": 2,
   "name": "Chrome Tweaks",
   "version": "0.0.1",
   "description": "A collection of little scripts that I use in my day-to-day",
