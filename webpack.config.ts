@@ -9,7 +9,7 @@ interface Env {
 const config = (env: Env) => {
   if (!env.firefox && !env.chrome) {
     process.stdout.write(
-      'Please choose either chrome or firefox using "--env <browser>"',
+      'Please choose either chrome or firefox using "--env <browser>"\n',
     );
     process.exit(1);
   }
